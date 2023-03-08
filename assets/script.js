@@ -3,7 +3,7 @@ var searchHist = [];
 // blank variable to store city name
 var cityName = "Winston-Salem";
 // variable to get current date
-var currentDay = dayjs().format('dddd, MMM D, YYYY, hh:mm a');
+var currentDay = dayjs().format('dddd, MMM D, YYYY,');
 // openweathermap api key
 var apiKey = "fb727f1a6ae3a38f400775ad30afa200";
 
@@ -21,7 +21,7 @@ function currentWeather(){
         return response.json();
         })
         .then(function(data){
-            document.getElementById('city-temp').textContent = `Current Temperature: ${data.main.temp}`
+            document.getElementById('city-temp').textContent = `Temp: ${data.main.temp}`
             console.log(data);
             weatherForecast()
         })
